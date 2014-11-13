@@ -1,0 +1,94 @@
+
+<%- partial('_partial/post/title', {item: page, index: false}) %>
+
+<div class="row <% if (false) { %>post<% } else { %>page<% } %>">
+    <!-- cols -->
+    <% if (false) { %>
+    <div class="col-md-9">
+    <% } else { %>
+    <div class="col-md-12">
+    <% } %>
+
+    <% if (page.description) { %>
+         <div class="alert alert-success description">
+            <i class="fa fa-info-circle"></i> <%- markdown(page.description) %>         
+        </div> <!-- alert -->
+    <% } %>     
+
+    <!-- content -->
+    <div class="mypage">
+        <%- page.content %>  
+    </div>
+
+    <div>
+    <center>
+    <%- partial('post/pagination', {page: page}) %>
+    </center>
+    </div>
+    
+    <!-- comment -->
+    <%- partial('post/comment', {page: page}) %>
+    
+    </div> <!-- col-md-9/col-md-12 -->
+    
+    <% if (false) { %>
+        <%- partial('post/meta', {item: page}) %>
+    <% } %>
+
+</div><!-- row -->
+
+<div class="list-group" id="works-wrapper">
+    <div class="list-group-item col-md-4">
+        <div class="row-picture">
+            <a target="_blank" href="#">
+            <i class="mdi-image-filter-vintage icon-material-teal"></i>
+            </a>
+        </div>
+        <div class="row-content">
+            <h4 class="list-group-item-heading"> <a target="_blank" href="#">脚手架</a> </h4>
+            <p class="list-group-item-text">解放生产力的利器，2min搞定MIS开发！</p>
+        </div>
+    </div>
+    <div class="list-group-item col-md-4">
+        <div class="row-picture">
+            <a target="_blank" href="http://wayou.github.io/baidu-gravity/">
+            <img class="circle nofancybox" src="/asset/common/img/works/baidu_logo.png" alt="icon">
+            </a>
+        </div>
+        <div class="row-content">
+            <h4 class="list-group-item-heading"> <a target="_blank" href="http://wayou.github.io/baidu-gravity/">Baidu Gravity</a></h4>
+            <p class="list-group-item-text">a box2d showcase adapted from <a href="http://mrdoob.com/projects/chromeexperiments/google-gravity/">google gravity</a></p>
+        </div>
+    </div>
+</div>
+
+<section id="comment">
+  <!--<h2 class="title"><%= __('comment') %></h2>-->
+
+  <% if (theme.comment_provider == "facebook") {
+      if (theme.facebook) { %>
+      <%- partial('_partial/facebook_comment', {fbConfig: theme.facebook}) %>
+      <% } %>
+  <% } else if(config.disqus_shortname) { %>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <% } else if(config.duoshuo_shortname) { %>
+   <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="<%=page.source%>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
+    <!-- 多说评论框 end -->
+   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  <% } %>
+</section>

@@ -1,0 +1,49 @@
+#slogan: ""
+
+menu:
+  - title: 首页
+    url: 
+    intro: ""
+    icon: "fa fa-home"
+  - title: 存档
+    url: archives
+    intro: ""
+    icon: "fa fa-list"
+  - title: 分类 
+    url: categories
+    intro: ""
+    icon: "fa fa-folder"
+  - title: 文档 
+    url: categories/文档/
+    intro: ""
+    icon: "mdi-action-description"
+  - title: Works 
+    url: works
+    intro: ""
+    icon: "mdi-action-polymer"
+  - title: 关于
+    url: about
+    intro: ""
+    icon: "fa fa-info-circle"
+  - title: RSS
+    url: atom.xml
+    intro: ""
+    icon: "fa fa-rss"
+
+links:
+  - title: "source"
+    url: http://www.github.com/wayou
+    intro: "My Github account."
+    icon: "fa fa-github"
+
+widgets:
+# - search
+- category
+# - tagcloud
+- recent_posts  
+- links
+
+rss: 
+fancybox: false
+favicon: favicon.png
+google_analytics: 
