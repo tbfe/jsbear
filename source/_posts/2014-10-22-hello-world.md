@@ -46,10 +46,20 @@ svn co https://svn.bce.bae.baidu.com/appiddjc4gceqy2/2
 
 ## 获取网站源码
 
+从GitHub获取项目源码。
+
+```bash
+mkdir jsbear
+cd jsbear
+git clone https://github.com/tbfe/jsbear.git
+```
+
+
 ## 安装Hexo
 本地安装Hexo静态站点生成器。
+
 ```bash
-npm install hexo -g
+npm install -g hexo 
 ```
 
 ## 安装依赖包
@@ -396,18 +406,23 @@ hexo optimize
 
 ## 部署
 
-经过上面的步骤在`public` 文件夹下生成了最新的静态文件，将此静态文件覆盖到BAE即可以生效。
-
-这样我们得到了静态资源，可以直接部署到服务器端了。空间使用的是BAE，直接提交代码即可生效。但线上生效的代码其实是加锁的，为了防止恶意提交或误操作。直接提交会失败，请先联系相关人员解锁。
+经过上面的步骤在`public`文件夹下生成了最新的静态站点文件，将里面的文件覆盖到`jsbear-output` 同时提交到BAE即可以生效。
 
 ```bash
 svn ci -m "new post"
 ```
 
+到这里，便完成了整个站点的更新。
 
 ## 提交更改
 
-到这里，便完成了整个站点的更新。
+同时将改动后的项目源码提交到GitHub。
+
+```bash
+git status
+git add --all
+git push origin master
+```
 
 接下来，
 
