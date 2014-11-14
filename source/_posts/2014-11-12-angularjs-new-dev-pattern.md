@@ -172,7 +172,7 @@ angular.bootstrap(document, [module.name]);
 - view1_controller.js
 - ...
 
-其中，现在的开发方式不需要在`view.html` 中指定`ng-congtroller`, 因为这个工作已经在路由配置时做了。
+其中，现在的开发方式不需要在`view.html` 中指定`ng-controller`, 因为这个工作已经在路由配置时做了。
 
 ### `services` 文件夹
 
