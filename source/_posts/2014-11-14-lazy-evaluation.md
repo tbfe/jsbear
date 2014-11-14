@@ -3,7 +3,7 @@ toc: true
 dropcap: false
 categories: 技术
 date: 2014-11-14 09:57:03
-author:
+author: wayou
 tags:
 - JavaScript
 - 性能优化

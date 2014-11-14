@@ -32,7 +32,7 @@ menu:
 
 links:
   - title: "source"
-    url: http://www.github.com/wayou
+    url: https://github.com/tbfe/jsbear
     intro: "My Github account."
     icon: "fa fa-github"
 
