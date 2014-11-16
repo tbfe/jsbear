@@ -797,7 +797,3 @@ figure.highlight{
 #main-nav .navbar-brand.withripple:hover {
     -webkit-animation: bringTheFunc linear 0.5s;
 }
-
-code{
-  border-radius: 0;
-}
