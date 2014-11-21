@@ -38,6 +38,15 @@ body {
   /*padding-bottom: 70px;*/
 }
 
+/*add icon for post link*/
+.mypage p a:not(.fancybox):after{
+  content: "\f08e";
+  font-family: 'FontAwesome';
+  margin-left: 2px;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+
 .content {
   /*padding: 20px;*/
   /*margin: 20px -15px;  negative indent the amount of the padding to maintain the grid system */
