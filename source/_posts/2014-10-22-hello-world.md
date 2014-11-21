@@ -171,11 +171,11 @@ MD中图片的写法与链接极其相似，只是链接前端多了个叹号，
 美图将至，屏住呼吸。
 
 ```markdown
-![bigger that bigger](asset/posts/2014-10-22-hello-world/hexo_logo.png)
+![bigger that bigger](/jsbear/asset/posts/2014-10-22-hello-world/hexo_logo.png)
 ```
 
 结果：
-![bigger that bigger](/asset/posts/2014-10-22-hello-world/btb.jpg)
+![bigger that bigger](/jsbear/asset/posts/2014-10-22-hello-world/btb.jpg)
 
 
 ### 强调与斜体
