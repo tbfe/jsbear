@@ -104,5 +104,5 @@ feed:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repo: https://github.com/wayou/tbfe-home.git
+  repo: https://github.com/tbfe/jsbear.git
   branch: gh-pages
