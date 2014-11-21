@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "0.11"
+script: 'npm run-script build "${TRAVIS_PULL_REQUEST}"'
+env:
+ global:
+ - GH_REF: github.com/tbfe/jsbear.git
+ - secure: ieUiufUeUBMgnWn42s2q3iaGdmFXvClk3L/QEQc177oBsbiugmOz7aQAUCrNa2Mcnan4Tw8uF3z/OVUYQXVLZgrq2CEcYMUZQcz0cUQw1YtD6d0+p+G8SgvINjlQEGe04WWbD2By2U3Yc8VBJiV/xjzUQGT4uyDgsQNXuKuie44=
