@@ -7,14 +7,14 @@ title: JSBear
 subtitle: 
 description: 我们是一群搞前端的熊孩子:()
 author: JSBear Team
-email: liuyong12@baidu.com
+email: 
 language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://jsbear.baidu.com/
 # root: 
-root: /
+root: /jsbear/
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
