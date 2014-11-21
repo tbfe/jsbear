@@ -36,14 +36,6 @@ tags:
 * [Git](http://git-scm.com/)
 {% endalert %}
 
-## 获取代码
-先获取BAE上面的网站代码到本地，这个代码是编译后的静态资源，并不是网站源码，check下来是为了之后更新覆盖，再提交到BAE。
-```bash
-mkdir jsbear-output
-cd jsbear-output
-svn co https://svn.bce.bae.baidu.com/appiddjc4gceqy2/2
-```
-
 ## 获取网站源码
 
 从GitHub获取项目源码。
@@ -406,10 +398,12 @@ hexo optimize
 
 ## 部署
 
-经过上面的步骤在`public`文件夹下生成了最新的静态站点文件，将里面的文件覆盖到`jsbear-output` 同时提交到BAE即可以生效。
+经过上面的步骤在`public`文件夹下生成了最新的静态站点文件,然后可以通过如下代码将更改更新到`gh-pages`分支。
 
 ```bash
-svn ci -m "new post"
+hexo d
+#抑或
+hexo deploy
 ```
 
 到这里，便完成了整个站点的更新。
@@ -419,7 +413,7 @@ svn ci -m "new post"
 同时将改动后的项目源码提交到GitHub。
 
 ```bash
-git status
+git status #提交前最好查看一下文件变更
 git add --all
 git push origin master
 ```
