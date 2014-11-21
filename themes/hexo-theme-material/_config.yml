@@ -13,8 +13,8 @@ menu:
     url: categories
     intro: ""
     icon: "fa fa-folder"
-  - title: 文档 
-    url: categories/文档/
+  - title: 译文 
+    url: categories/译文/
     intro: ""
     icon: "mdi-action-description"
   - title: Works 

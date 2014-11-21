@@ -1,7 +1,7 @@
 title: 延迟求值-如何让Lo-Dash再提速x100?
 toc: true
 dropcap: false
-categories: 技术
+categories: 译文
 date: 2014-11-14 09:57:03
 author: wayou
 tags:
@@ -133,3 +133,6 @@ $json.get("/new/assets").success(function(data) {
 # 后记
 
 延迟求值并且不算什么新技术。在一些库中已经在使用了，比如[LINQ](http://en.wikipedia.org/wiki/Language_Integrated_Query),[Lazy.js](http://danieltao.com/lazy.js/)还有其他等等。那么问题来了，`Lo-Dash`存在的意义是啥？我想就是你仍然可以使用你熟悉的`Underscore` 接口但享受一个更高效的底层实现，不需要额外的学习成本，代码上面也不会有大的变动，只需稍加修改。
+
+
+>译注：对于`lazy evaluation` 与`deferred execution` 中`lazy` 与`deferred` 的区分，在翻译时找不到恰当的区分。前者用主流使用的「延迟」会更易懂，而后者同时也译为「延迟」, 但他们在记性上还是存在一定差别的，具体的讨论可见[这里](https://github.com/tbfe/translation/pull/2#discussion_r20362267)。

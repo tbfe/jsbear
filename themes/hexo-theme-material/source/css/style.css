@@ -197,7 +197,7 @@ li i {
   width: 100%;  
 }
 
-.archive-title:before {
+/*.archive-title:before {
   font-family: FontAwesome;
   content: '\f03a  ';
 }
@@ -210,7 +210,7 @@ li i {
 .archive-title-category:before {
   font-family: FontAwesome;
   content: '\f07b  ';
-}
+}*/
 
 /* =============================================================================
    hyper links
