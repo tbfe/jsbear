@@ -1,7 +1,8 @@
 #!/bin/bash
 rm -rf public || exit 0;
 mkdir public;
-hexo generate;
+#instead of using general `hexo generate` method, use the following one to get compressed and combined files for publishing
+hexo optimize;
 if [ "$1" = "false" ] 
 # not a pull request, deploy to github pages
 then ( cd public
