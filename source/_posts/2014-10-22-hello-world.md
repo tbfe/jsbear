@@ -36,14 +36,14 @@ tags:
 * [Git](http://git-scm.com/)
 {% endalert %}
 
-## 获取网站源码
+## Fork 项目& 获取源码
 
-从GitHub获取项目源码。
+首先在Github fork本项目,然后将fork的代码克隆到本地。
 
 ```bash
 mkdir jsbear
 cd jsbear
-git clone https://github.com/tbfe/jsbear.git
+git clone https://github.com/{你的github用户名}/jsbear.git
 ```
 
 
@@ -56,34 +56,38 @@ npm install -g hexo
 
 ## 安装依赖包
 ```bash
-npm i
-# 或者
 npm install
+# 或者
+npm i
 ```
 
 
 ## 启动服务器
 准备好了吗？使用下面的命令，来打开站点吧！
 ```bash
-hexo s
-# 或者
 hexo server
+# 或者
+hexo s
 ```
 
 服务器启动后，在浏览器地址栏输入`localhost` 进行访问。
 
 {% alert info %}
-服务器启动后可以按「Ctrl+C」将其停止
+- 项目配置文件已经默认将端口设置为80，所以无需在`localhost`后加端口访问了
+- 服务器启动后可以按「Ctrl+C」将其停止
 {% endalert %}
 
 # 书写/Writing
+
+当本地运行起来后，You are ready to go!
+以下步骤让你学会书写并且时实预览效果。
 
 ## 创建新贴
 
 使用如下命令创建新贴。
 
 ``` bash
-hexo new "My New Post" #最好用英文
+hexo new "My New Post" #这里标题最好用英文
 ```
 它会在项目的`source/_posts/` 路径下创建一个时间加文章标题的`.md` 文件。我在这个文件中书写文章内容。
 
@@ -380,39 +384,9 @@ hexo s #再次启动服务器进行预览
 而`asset`下面还有一个`common`文件夹，里面存放一些共用的资源，比如你写了一篇关于HTML5的文章，并且希望在首页显示一个HTML5 logo的缩略图，那么这个图片就应该存放在`common`里，因为另外的人以后可能也会分享相关文章，这时他就不必另取图片，而直接用`common`里的即可。
 
 
-# 提交/ Commit
+# 提交更改/ pull request
 
-完成了你的内容新增，我们来到提交步骤。
-
-## 文件生成
-
-首先需要将原始`.md` 文件及所有模板文件生成我们需要的静态HTML资源。
-并且你可能希望这些生成的`js`,`css`以及`HTML`是经过压缩混淆的。
-所以我们首先运行下面的命令：
-
-```bash
-hexo o
-#抑或
-hexo optimize
-```
-
-## 部署
-
-经过上面的步骤在`public`文件夹下生成了最新的静态站点文件,然后可以通过如下代码将更改更新到`gh-pages`分支。
-
-```bash
-hexo d
-#抑或
-hexo deploy
-```
-
-到这里，便完成了整个站点的更新。
-
-其实文件的生成和部署可以通过如下命令合为一步：
-```bash
-hexo o -d
-```
-所以大多会使用这种更加方便的形式。
+完成了你的内容新增并且本地预览确认好效果后，我们来到提交步骤。
 
 ## 提交更改
 
@@ -426,6 +400,20 @@ git push origin master
 
 接下来，
 
+将你的更改合并到源项目，也就是发起一个`pull request`。
+
+在Github上你fork的项目页面，点击`pull request`：
+![create pr step1](/jsbear/asset/posts/2014-10-22-hello-world/create_pr.jpg)
+
+来到创建页面：
+![create pr step2](/jsbear/asset/posts/2014-10-22-hello-world/create_pr2.jpg)
+
+填写相关描述或者省略：
+![create pr step3](/jsbear/asset/posts/2014-10-22-hello-world/create_pr3.jpg)
+
+之后便等待代码的`review`和合并吧！
+
+<br>
 即刻出发，享受书写来带的乐趣吧！
 
 # 附录/ Appendix
