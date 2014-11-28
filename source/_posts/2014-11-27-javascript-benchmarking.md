@@ -168,7 +168,7 @@ while (iterations--) {
 
 值得庆幸的是，JavaScript是可以[拿到最小的时间度量单位](https://mathiasbynens.be/demo/javascript-timers)的。这之后，我们可以通过[数学方式](http://spiff.rit.edu/classes/phys273/uncert/uncert.html)将测试结果的不确定性降低到只有1%。为此，我们将这个最小时间度量单位除以2以得到这个*不准确度*。假设我们在XP上用IE6，此种情况下最小的度量单位是15毫秒。这个不确定率就为`15ms/2=7.5ms`。然后我们想控制结果的误差到1%，于是乎我们将刚才得到的不确定性值除以0.01，就得到了达到测试要求需要的最小测试时限为：`7.5/0.01=750ms`。
 
-## 备选时钟
+## 其他时钟
 
 当启用`--enable-benchmarking` 标志后，Chrome和Chromium会暴露出一个叫做`chrome.Interval`的方法，可以用它作为一个高精度的时钟使用。
 
