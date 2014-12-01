@@ -1,9 +1,8 @@
 $(function() {
     var $toc = $("#toc");
-    if ( !! $toc.length && screen.width > 999 && $('.mypage').find('h1').length != 0) {
+    if ( !! $toc.length && screen.width > 999 && $('.mypage').find('h2').length != 0) {
         $("#toc").tocify({
             context: '.mypage',
-            // scrollHistory: true,
             theme: 'bootstrap3',
             selectors: 'h2,h3,h4'
         });
