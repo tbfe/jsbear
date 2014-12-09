@@ -394,15 +394,13 @@
 
               item.append($("<a/>", {
 
-                // "text": self.text()
-                // added by wayou
-                "text": self.text().length>12?(self.text().substr(0,12)+'...'):self.text()
+                "text": self.text()
 
               }));
 
             } else {
 
-              item.text(self.text().length>12?(self.text().substr(0,12)+'...'):self.text());
+              item.text(self.text());
 
             }
 
