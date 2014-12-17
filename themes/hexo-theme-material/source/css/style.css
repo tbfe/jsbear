@@ -706,3 +706,9 @@ figure.highlight {
 code {
     border-radius: 0;
 }
+
+
+/*disable image border-radius for list group*/
+.list-group .list-group-item .row-action-primary img.circle, .list-group .list-group-item .row-picture img.circle{
+    border-radius: 0;
+}
