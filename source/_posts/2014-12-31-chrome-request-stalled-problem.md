@@ -21,7 +21,7 @@ tags:
 
 有用户反馈内部MIS系统慢，页面加载耗时长。前端同学们开组会提及此事，如何解决慢的问题。
 
-最致命的是：偶发!你不能准确知道它抽风的时间点，无法在想要追查问题的时候必现它。
+最致命的是：偶发！你不能准确知道它抽风的时间点，无法在想要追查问题的时候必现它。
 这只是一方面，另外，慢的可能实在太多了，那么问题来了，是前端导致的还是后端的问题？
 
 对慢的定义也有待商榷，多久算慢？如果这个页面加载大量数据耗时增加那我认为这是正常的。但这个时限超过了一个合理的自然值，就变得不那么正常了，比如四五十秒，一分多钟。
@@ -294,7 +294,7 @@ Chrome Dev Tools 网络面板截图：
 
 ### 日志还原
 
-- [下载该日志文件](https://gist.githubusercontent.com/wayou/090e63220c6e8a6b8281/raw/71c1696ecd8241c09b7beef141da788e4c82d6c3/net-internals-log.json)
+- [下载该日志文件](https://gist.githubusercontent.com/wayou/39772215d075c80d643a/raw/9c91463f22016d20c90de19e77ae3e4f302e0769/gistfile1.txt)
 
 - 在Chrome新开一个标签输入`chrome://net-internals/#events`
 - 切换到`Import`，选择刚才下载的JSON文件进行导入
