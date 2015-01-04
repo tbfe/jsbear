@@ -496,7 +496,7 @@ t=1728 [st=172] -REQUEST_ALIVE
 - 发送请求头 ` +HTTP_TRANSACTION_SEND_REQUEST  [dt=1]`
 - 读取响应头 ` +HTTP_TRANSACTION_READ_HEADERS  [dt=161]`
 
-![](/jsbear/asset/posts/2014-12-31-chrome-request-stalled-problem/timeline-screen-capture.jpg)
+![](/jsbear/asset/posts/2014-12-31-chrome-request-stalled-problem/normal-section.jpg)
 
 这是正常的情况下，没有什么问题。并且日志里可以清晰地看到发送的请求头是什么，然后解析出来的响应头是什么。这跟在网络面板看到的是一致的。
 
