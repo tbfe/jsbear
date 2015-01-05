@@ -716,7 +716,6 @@ Time spent issuing the network request. Typically a fraction of a millisecond.
 具体来说，能够得到的结论有以下几点：
 
 - 请求成功构造，失败情况下也可以看到正常的请求头被打印出来了的
-- 请求有没有发出去暂时无法下定论，因为关于Chromium部分的多少带有猜测的成分
 - 可以肯定的是在与服务器建立连接时被Shut down了，参考上面关于连接重置的部分会更有意义一些
 
 最后希望RD同跟进，协助排查服务器连接及后端代码的部分。
