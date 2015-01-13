@@ -668,6 +668,33 @@ A收到B的肯定应答，到此A与B经历了三次通信或者说是握手，�
 
 值得注意的是，上面列出的情况服务器的不确定性导致连接重置的可能性要合理些。Chrome 主动发起URL请求不太可能自己又重置掉，并且没有理由重置掉后又去重连。
 
+## 进一步解读日志文件
+
+上面Chromium源码部分的求证多少带有猜测成分。不妥。
+
+因为没找到关于Chrome net-internal 日志的官方文档什么的，自身去解读始终是有局限的。不如提个ISSUE让Chromium开发人员来搭一把手吧。遂向Chromium提交ISSUE，请[戳此查看](https://code.google.com/p/chromium/issues/detail?id=447463)，虽然我不认为现在遇到的这个问题跟Chrome有关并且属于Chrome的Bug，目的仅仅是看他们能否帮忙给出合理的日志解读来定位问题。
+
+三天后（有点热泪盈眶），有同学[回复](https://code.google.com/p/chromium/issues/detail?id=447463#c1)，将日志所体现的问题诊断得似乎很有道理，可信。
+
+> 1)  We have a bunch of connections to qa.tieba.baidu.com, all were used successfully, and are now idle.
+> 2)  They all silently die for some reason, without us ever being informed.  My guess is your personal router times out the connection, but this could also be your ISP, the destination server, or ever a real network outage (A short one) that prevents us from getting the connection closed message.
+> 3)  There's a new request to qa.tieba.baidu.com.  We try to reuse a socket.  After 21 seconds, we get the server's RST message ("I don't have a connection to you.").  Since it was a stale socket, we're aware this sometimes happens, so we just retry...And get the next idle socket in the list, which, after 21 seconds, gives us the same reset message.  We try again, for the same reason.  This time we don't have another stale socket to try, so we use a fresh one.  The request succeeds.
+
+> The real problem here is something is taking 21 seconds to send us the RST messages, despite the fact that a roundtrip to the server you're talking to only takes about 100 milliseconds.
+
+
+- 「之前有过很多成功的连接」，确实，因为出现加载缓慢的情况是偶发的，这之前有过很多正常的不卡的请求存在过。这里没有异议。
+
+- 「他们都以未知的原因被断掉了」，因为不是正常地断开连接，所以客户端也就是浏览器不知道当前与服务器的TCP连接已经断开，傻傻地保留着与服务器连接的socket，注意，此时已经发生信息的不对等了，这是问题的根源。至于什么原因，给出了可能的原因：路由器认为连接超时将其断掉，同时不排除ISP（互联网服务提供商）的原因，服务器暂时的停运抽风等。不管怎样，客户端浏览器没有收到连接断开的信息。
+
+- 在上面的基础上，我们去发起一次新的请求。此时浏览器希望重用之前的连接以节省资源，用之前的一个socket去发起连接。21秒后收到服务器返回的重置信息（意思是服务器告诉浏览器：我和你之间没有连接），没关系，上面提到，我们有很多可以重用的连接，于是浏览器重新从可用的连接里面又选择了一个去进行连接，不幸的是，同样的情况再次发生，21秒后收到服务器的重置信息。这体现在日志上就是第二次重试失败。到第三次，因为前面浏览器认为可以重用的连接现在都被正确地标为断开了，没有新的可用，于是这次浏览器发起了全新的请求，成功了！
+
+总结出来，两个问题：
+
+- 为什么之前成功的连接不正常的断开了？服务器配置或者网络原因？
+- 是什么让浏览器21秒后才收到重置信息？服务器作出反应过慢还是网络原因？
+
+
 
 ## Chrome Dev Tool 中时间线各阶段代表的意义
 
@@ -719,6 +746,8 @@ Time spent issuing the network request. Typically a fraction of a millisecond.
 - 可以肯定的是在与服务器建立连接时被Shut down了，参考上面关于连接重置的部分会更有意义一些
 
 最后希望RD同跟进，协助排查服务器连接及后端代码的部分。
+
+{% textcolor primary %}01/13日更新：参见上面进一步解读日志文件部分。{% endtextcolor %}
 
 
 ## 参考及引用
