@@ -765,3 +765,5 @@ Time spent issuing the network request. Typically a fraction of a millisecond.
 \#11 [ERR_CONNECTION_RESET 的Chromium 源码](https://code.google.com/p/chromium/codesearch#chromium/src/net/http/http_stream_parser.cc&q=ERR_CONNECTION_RESET&sq=package:chromium&dr=C&l=77)
 \#12 [Chromium Network Stack](http://www.chromium.org/developers/design-documents/network-stack#TOC-HttpStreamFactory)
 \#13 [Where do resets come from? (No, the stork does not bring them.)](http://blogs.technet.com/b/networking/archive/2009/08/12/where-do-resets-come-from-no-the-stork-does-not-bring-them.aspx)
+\#14 [Issue 447463: Chrome-network: Long delay before RST message on stale sockets results in slow page loads)](https://code.google.com/p/chromium/issues/detail?id=447463#c1)
+
