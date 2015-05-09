@@ -1,24 +1,24 @@
-# ¼ôÇĞÓë¸´ÖÆÃüÁî
+# å‰ªåˆ‡ä¸å¤åˆ¶å‘½ä»¤
 
-tags£º javascript cut-and-copy execcommand
+tags: javascript cut-and-copy execcommand
 
 ---
 
 by [Matt Gaunt](http://www.html5rocks.com/profiles/#mattgaunt)
-·¢²¼Ê±¼ä£º 2015Äê4ÔÂ15ÈÕ
-¸üĞÂÊ±¼ä£º 2015Äê4ÔÂ15ÈÕ
+å‘å¸ƒæ—¶é—´ï¼š 2015å¹´4æœˆ15æ—¥
+æ›´æ–°æ—¶é—´ï¼š 2015å¹´4æœˆ15æ—¥
 
-IE10ºÍÆäÖ®ºóµÄ°æ±¾Ìí¼ÓÁË¶Ô¡¸¼ôÇĞ¡¹ºÍ¡¸¸´ÖÆ¡¹ÃüÁîµÄÖ§³Ö£¬Í¨¹ı¡¸[Document.execCommand()](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument%2FexecCommand&sa=D&sntz=1&usg=AFQjCNGXS6fCPqMRGr1_NECYZuxIOyVURg)¡¹·½·¨¡£´ÓChrome 43¿ªÊ¼£¬ÕâĞ©ÃüÁîÒ²±»ChromeÖ§³ÖÁË¡£
+IE10å’Œå…¶ä¹‹åçš„ç‰ˆæœ¬æ·»åŠ äº†å¯¹ã€Œå‰ªåˆ‡ã€å’Œã€Œå¤åˆ¶ã€å‘½ä»¤çš„æ”¯æŒï¼Œé€šè¿‡ã€Œ[Document.execCommand()](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument%2FexecCommand&sa=D&sntz=1&usg=AFQjCNGXS6fCPqMRGr1_NECYZuxIOyVURg)ã€æ–¹æ³•ã€‚ä»Chrome 43å¼€å§‹ï¼Œè¿™äº›å‘½ä»¤ä¹Ÿè¢«Chromeæ”¯æŒäº†ã€‚
 
-µ±ÕâĞ©ÃüÁî±»Ö´ĞĞºó£¬ÔÚä¯ÀÀÆ÷ÖĞ±»Ñ¡ÖĞµÄÎÄ±¾¾Í»á±»¼ôÇĞ»ò¸´ÖÆµ½ÓÃ»§µÄ¼ôÌù°åÖĞ¡£ÕâÈÃÄã¿ÉÒÔÎªÓÃ»§Ìá¹©Ò»ÖÖ¼òµ¥µÄ·½Ê½¡ª¡ªÑ¡ÖĞ²¿·ÖÎÄ±¾²¢¸´ÖÆ½ø¼ôÌù°åÖĞ¡£
+å½“è¿™äº›å‘½ä»¤è¢«æ‰§è¡Œåï¼Œåœ¨æµè§ˆå™¨ä¸­è¢«é€‰ä¸­çš„æ–‡æœ¬å°±ä¼šè¢«å‰ªåˆ‡æˆ–å¤åˆ¶åˆ°ç”¨æˆ·çš„å‰ªè´´æ¿ä¸­ã€‚è¿™è®©ä½ å¯ä»¥ä¸ºç”¨æˆ·æä¾›ä¸€ç§ç®€å•çš„æ–¹å¼â€”â€”é€‰ä¸­éƒ¨åˆ†æ–‡æœ¬å¹¶å¤åˆ¶è¿›å‰ªè´´æ¿ä¸­ã€‚
 
-ÈçÆäÊÇµ±Äã°ÑËüÓë [Selection API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) Ò»ÆğÊ¹ÓÃÊ±£¬Í¨¹ı±à³ÌÑ¡ÖĞÒ»¶Î´òËã¸´ÖÆ½ø¼ôÌù°åµÄÎÄ±¾£¬Õâ½«±äµÃ¼«ÆäÊµÓÃ£¬ÕâÕıÊÇ½ÓÏÂÀ´ÎÒÃÇÔÚÕâÆªÎÄÕÂÖĞÒª½éÉÜµÄÏêÏ¸ÄÚÈİ¡£
+å¦‚å…¶æ˜¯å½“ä½ æŠŠå®ƒä¸ [Selection API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) ä¸€èµ·ä½¿ç”¨æ—¶ï¼Œé€šè¿‡ç¼–ç¨‹é€‰ä¸­ä¸€æ®µæ‰“ç®—å¤åˆ¶è¿›å‰ªè´´æ¿çš„æ–‡æœ¬ï¼Œè¿™å°†å˜å¾—æå…¶å®ç”¨ï¼Œè¿™æ­£æ˜¯æ¥ä¸‹æ¥æˆ‘ä»¬åœ¨è¿™ç¯‡æ–‡ç« ä¸­è¦ä»‹ç»çš„è¯¦ç»†å†…å®¹ã€‚
 
-## ¼òµ¥Ê¾Àı
+## ç®€å•ç¤ºä¾‹
 
-ÎªÁËÕâ¸öÊ¾Àı£¬ÎÒÃÇÏÈÌí¼ÓÒ»¸ö°´Å¥£¬ÓÃÓÚ¸´ÖÆÒ»¸ö email µØÖ·µ½¼ôÌù°åÖĞ¡£
+ä¸ºäº†è¿™ä¸ªç¤ºä¾‹ï¼Œæˆ‘ä»¬å…ˆæ·»åŠ ä¸€ä¸ªæŒ‰é’®ï¼Œç”¨äºå¤åˆ¶ä¸€ä¸ª email åœ°å€åˆ°å‰ªè´´æ¿ä¸­ã€‚
 
-ÎÒÃÇÔÚ HTML ÖĞÌí¼ÓÁËÒ»¸ö email µØÖ·ºÍÒ»¸öÓÃÓÚµã»÷ºó½øĞĞ¸´ÖÆµÄ°´Å¥¡£
+æˆ‘ä»¬åœ¨ HTML ä¸­æ·»åŠ äº†ä¸€ä¸ª email åœ°å€å’Œä¸€ä¸ªç”¨äºç‚¹å‡»åè¿›è¡Œå¤åˆ¶çš„æŒ‰é’®ã€‚
 
 ```html
 <p>Email me at <a class="js-emaillink" href="mailto:matt@example.co.uk">matt@example.co.uk</a></p>
@@ -26,19 +26,19 @@ IE10ºÍÆäÖ®ºóµÄ°æ±¾Ìí¼ÓÁË¶Ô¡¸¼ôÇĞ¡¹ºÍ¡¸¸´ÖÆ¡¹ÃüÁîµÄÖ§³Ö£¬Í¨¹ı¡¸[Document.execComm
 <p><button class="js-emailcopybtn"><img src="./images/copy-icon.png" /></button></p>
 ```
 
-ÏÂÃæÔÚ JavaScriptÖĞ£¬ÎÒÃÇÎª°´Å¥Ìí¼ÓÁËÒ»¸öµã»÷ÊÂ¼şµÄ´¦ÀíÆ÷£¬À´ÓÃÓÚÑ¡ÖĞ ```js-emaillink``` ÃªµãÖĞµÄ email µØÖ·£¬²¢Ö´ĞĞ¸´ÖÆÃüÁî£¬email µØÖ·±»¸´ÖÆ½ø¼ôÌù°å£¬È»ºóÈ¡ÏûÑ¡ÖĞ£¬ÕâÑùÓÃ»§¾Í²»»á¿´µ½Ñ¡Çø¹â±ê¡£
+ä¸‹é¢åœ¨ JavaScriptä¸­ï¼Œæˆ‘ä»¬ä¸ºæŒ‰é’®æ·»åŠ äº†ä¸€ä¸ªç‚¹å‡»äº‹ä»¶çš„å¤„ç†å™¨ï¼Œæ¥ç”¨äºé€‰ä¸­ ```js-emaillink``` é”šç‚¹ä¸­çš„ email åœ°å€ï¼Œå¹¶æ‰§è¡Œå¤åˆ¶å‘½ä»¤ï¼Œemail åœ°å€è¢«å¤åˆ¶è¿›å‰ªè´´æ¿ï¼Œç„¶åå–æ¶ˆé€‰ä¸­ï¼Œè¿™æ ·ç”¨æˆ·å°±ä¸ä¼šçœ‹åˆ°é€‰åŒºå…‰æ ‡ã€‚
 
 ```js
 var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
 copyEmailBtn.addEventListener('click', function(event) {  
-  // Ñ¡ÖĞ email Á´½ÓµÄÎÄ±¾  
+  // é€‰ä¸­ email é“¾æ¥çš„æ–‡æœ¬  
   var emailLink = document.querySelector('.js-emaillink');  
   var range = document.createRange();  
   range.selectNode(emailLink);  
   window.getSelection().addRange(range);  
     
   try {  
-    // ÎÒÃÇÒÑ¾­Ñ¡ÖĞÁËÎÄ±¾£¬ÏÂÃæÖ´ĞĞ¡¸¸´ÖÆ¡¹ÃüÁî  
+    // æˆ‘ä»¬å·²ç»é€‰ä¸­äº†æ–‡æœ¬ï¼Œä¸‹é¢æ‰§è¡Œã€Œå¤åˆ¶ã€å‘½ä»¤  
     var successful = document.execCommand('copy');  
     var msg = successful ? 'successful' : 'unsuccessful';  
     console.log('Copy email command was ' + msg);  
@@ -46,20 +46,20 @@ copyEmailBtn.addEventListener('click', function(event) {
     console.log('Oops, unable to copy');  
   }  
     
-  // ÒÆ³ıÑ¡Çø - ×¢Òâ: ä¯ÀÀÆ÷Ö§³ÖµÄ»°Ó¦¸ÃÊ¹ÓÃ removeRange(range)  
+  // ç§»é™¤é€‰åŒº - æ³¨æ„: æµè§ˆå™¨æ”¯æŒçš„è¯åº”è¯¥ä½¿ç”¨ removeRange(range)  
   window.getSelection().removeAllRanges();  
 });
 ```
 
-ÎÒÃÇÕâÀïÊ¹ÓÃÁË [Selection API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) µÄÒ»¸ö·½·¨£¬ÓÃ [window.getSelection](https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection)  À´Ñ¡ÖĞÎÒÃÇÒª¸´ÖÆ½øÓÃ»§¼ôÌù°åµÄÃªµãÖĞµÄÎÄ±¾¡£ÔÚµ÷ÓÃ ```document.execCommand``` Ö®ºó£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ıµ÷ÓÃ [window.getSelection().removeAllRanges()](https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeAllRanges) À´ÒÆ³ıµôÑ¡Çø¡£
+æˆ‘ä»¬è¿™é‡Œä½¿ç”¨äº† [Selection API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) çš„ä¸€ä¸ªæ–¹æ³•ï¼Œç”¨ [window.getSelection](https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection)  æ¥é€‰ä¸­æˆ‘ä»¬è¦å¤åˆ¶è¿›ç”¨æˆ·å‰ªè´´æ¿çš„é”šç‚¹ä¸­çš„æ–‡æœ¬ã€‚åœ¨è°ƒç”¨ ```document.execCommand``` ä¹‹åï¼Œæˆ‘ä»¬å¯ä»¥é€šè¿‡è°ƒç”¨ [window.getSelection().removeAllRanges()](https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeAllRanges) æ¥ç§»é™¤æ‰é€‰åŒºã€‚
 
 
-Èç¹ûÄãÏëÒªÈ·ÈÏÖ´ĞĞĞ§¹ûÊÇ·ñÈçÄãËùÔ¸£¬Äã¿ÉÒÔ¼ì²é ```document.execCommand()``` µÄ·µ»ØÖµ; Èç¹ûÕâ¸öÃüÁî²»±»Ö§³Ö»òÃ»ÓĞ±»ÉèÖÃÎª´ò¿ªµÄ»°Ëü½«·µ»Ø ```false```¡£ÎÒÃÇ¿ÉÒÔ½« ```execCommand()``` Ğ´½ø try-catch ÖĞÀ´´¦ÀíÄ³Ğ©³¡¾°ÖĞÔÚÖ´ĞĞ¡¸¼ôÇĞ¡¹ºÍ¡¸¸´ÖÆ¡¹ÃüÁîÊ±[Å×³öµÄ´íÎó](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#the-copy-command)¡£
+å¦‚æœä½ æƒ³è¦ç¡®è®¤æ‰§è¡Œæ•ˆæœæ˜¯å¦å¦‚ä½ æ‰€æ„¿ï¼Œä½ å¯ä»¥æ£€æŸ¥ ```document.execCommand()``` çš„è¿”å›å€¼; å¦‚æœè¿™ä¸ªå‘½ä»¤ä¸è¢«æ”¯æŒæˆ–æ²¡æœ‰è¢«è®¾ç½®ä¸ºæ‰“å¼€çš„è¯å®ƒå°†è¿”å› ```false```ã€‚æˆ‘ä»¬å¯ä»¥å°† ```execCommand()``` å†™è¿› try-catch ä¸­æ¥å¤„ç†æŸäº›åœºæ™¯ä¸­åœ¨æ‰§è¡Œã€Œå‰ªåˆ‡ã€å’Œã€Œå¤åˆ¶ã€å‘½ä»¤æ—¶[æŠ›å‡ºçš„é”™è¯¯](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#the-copy-command)ã€‚
 
 
-¡¸¼ôÇĞ¡¹ÃüÁîÓÃÓÚÄãÏëÒªÉ¾³ıÎÄ±¾¿òÖĞµÄÎÄ±¾£¬²¢Ê¹ËüÃÇ¿ÉÍ¨¹ı¼ôÌù°å·ÃÎÊµÄ³¡¾°¡£
+ã€Œå‰ªåˆ‡ã€å‘½ä»¤ç”¨äºä½ æƒ³è¦åˆ é™¤æ–‡æœ¬æ¡†ä¸­çš„æ–‡æœ¬ï¼Œå¹¶ä½¿å®ƒä»¬å¯é€šè¿‡å‰ªè´´æ¿è®¿é—®çš„åœºæ™¯ã€‚
 
-ÔÚHTMLÖĞÊ¹ÓÃ ```textarea``` ºÍ ```button```£º
+åœ¨HTMLä¸­ä½¿ç”¨ ```textarea``` å’Œ ```button```ï¼š
 
 ```html
 <p><textarea class="js-cuttextarea">Hello I'm some text</textarea></p>
@@ -67,7 +67,7 @@ copyEmailBtn.addEventListener('click', function(event) {
 <p><button class="js-textareacutbtn" disable>Cut Textarea</button></p>
 ```
 
-ÎÒÃÇ¿ÉÒÔ¼ôÇĞÄÚÈİÍ¨¹ıÈçÏÂ·½Ê½:
+æˆ‘ä»¬å¯ä»¥å‰ªåˆ‡å†…å®¹é€šè¿‡å¦‚ä¸‹æ–¹å¼:
 
 ```js
 var cutTextareaBtn = document.querySelector('.js-textareacutbtn');
@@ -86,26 +86,26 @@ cutTextareaBtn.addEventListener('click', function(event) {
 });
 ```
 
-## queryCommandSupported ºÍ queryCommandEnabled
+## queryCommandSupported å’Œ queryCommandEnabled
 
-ÔÚµ÷ÓÃ ```document.execCommand()``` Ö®Ç°£¬ÄãÓ¦¸ÃÍ¨¹ı [document.queryCommandSupported()](https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported) ·½·¨È·±£Õâ¸öAPIÊÇ¿ÉÓÃµÄ¡£ÔÚÎÒÃÇµÄÊ¾ÀıÖĞ£¬ÎÒÃÇ¿ÉÒÔ°´ÕÕÃüÁîµÄÖ§³Ö×´¿öÀ´ÉèÖÃ°´Å¥µÄ¿ÉÓÃ×´Ì¬£¬±ÈÈç£º
+åœ¨è°ƒç”¨ ```document.execCommand()``` ä¹‹å‰ï¼Œä½ åº”è¯¥é€šè¿‡ [document.queryCommandSupported()](https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported) æ–¹æ³•ç¡®ä¿è¿™ä¸ªAPIæ˜¯å¯ç”¨çš„ã€‚åœ¨æˆ‘ä»¬çš„ç¤ºä¾‹ä¸­ï¼Œæˆ‘ä»¬å¯ä»¥æŒ‰ç…§å‘½ä»¤çš„æ”¯æŒçŠ¶å†µæ¥è®¾ç½®æŒ‰é’®çš„å¯ç”¨çŠ¶æ€ï¼Œæ¯”å¦‚ï¼š
 
 ```js
 copyEmailBtn.disabled = !document.queryCommandSupported('copy');
 ```
 
-ÖÁÓÚ [document.queryCommandSupported()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandsupported()) ºÍ [document.queryCommandEnable()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandenabled()) Ö®¼äµÄÇø±ğ£¬Ò»¸öÓÃÓÚ¼ì²â¡¸¼ôÇĞ¡¹ºÍ¡¸¸´ÖÆ¡¹ÊÇ·ñ±»ä¯ÀÀÆ÷Ö§³Ö£¬ÁíÒ»¸öÔòÊÇ£¬Èç¹ûµ±Ç°Ã»ÓĞÎÄ±¾±»Ñ¡ÖĞ£¬ÄÇÃ´Õâ¸öÃüÁî¾Í²»ÊÇ¡¸enabled¡¹µÄ¡£ÔÚÄãÒªÖ´ĞĞÕâĞ©ÃüÁîÊ±£¬Ã»ÓĞÑ¡ÖĞÎÄ±¾ÏëÒªÏÔÊ¾Ò»ÌõĞÅÏ¢¸øÓÃ»§Ê±£¬Õâ¸ö·½·¨ÌØ±ğÓĞÓÃ¡£
+è‡³äº [document.queryCommandSupported()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandsupported()) å’Œ [document.queryCommandEnable()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandenabled()) ä¹‹é—´çš„åŒºåˆ«ï¼Œä¸€ä¸ªç”¨äºæ£€æµ‹ã€Œå‰ªåˆ‡ã€å’Œã€Œå¤åˆ¶ã€æ˜¯å¦è¢«æµè§ˆå™¨æ”¯æŒï¼Œå¦ä¸€ä¸ªåˆ™æ˜¯ï¼Œå¦‚æœå½“å‰æ²¡æœ‰æ–‡æœ¬è¢«é€‰ä¸­ï¼Œé‚£ä¹ˆè¿™ä¸ªå‘½ä»¤å°±ä¸æ˜¯ã€Œenabledã€çš„ã€‚åœ¨ä½ è¦æ‰§è¡Œè¿™äº›å‘½ä»¤æ—¶ï¼Œæ²¡æœ‰é€‰ä¸­æ–‡æœ¬æƒ³è¦æ˜¾ç¤ºä¸€æ¡ä¿¡æ¯ç»™ç”¨æˆ·æ—¶ï¼Œè¿™ä¸ªæ–¹æ³•ç‰¹åˆ«æœ‰ç”¨ã€‚
 
-## ä¯ÀÀÆ÷Ö§³Ö×´¿ö
+## æµè§ˆå™¨æ”¯æŒçŠ¶å†µ
 
-IE 10+¡¢Chrome 43+¡¢ºÍ Opera 29+ Ö§³ÖÕâĞ©ÃüÁî¡£
+IE 10+ã€Chrome 43+ã€å’Œ Opera 29+ æ”¯æŒè¿™äº›å‘½ä»¤ã€‚
 
-»ğºüÖ§³ÖÕâĞ©ÃüÁî£¬µ«ĞèÒª½øĞĞÅäÖÃ±ä¸ü£¨[¾ßÌå¿´ÕâÀï](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)£©¡£Èç¹û²»ĞŞ¸ÄÅäÖÃ»ğºü½«»á±¨´í¡£
+ç«ç‹æ”¯æŒè¿™äº›å‘½ä»¤ï¼Œä½†éœ€è¦è¿›è¡Œé…ç½®å˜æ›´ï¼ˆ[å…·ä½“çœ‹è¿™é‡Œ](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)ï¼‰ã€‚å¦‚æœä¸ä¿®æ”¹é…ç½®ç«ç‹å°†ä¼šæŠ¥é”™ã€‚
 
-Safari ²»Ö§³ÖÕâĞ©ÃüÁî¡£
+Safari ä¸æ”¯æŒè¿™äº›å‘½ä»¤ã€‚
 
-## ÒÑÖª Bugs
+## å·²çŸ¥ Bugs
 
-* µ÷ÓÃ ```queryCommadSupported()``` À´²éÑ¯¡¸¼ôÇĞ¡¹ºÍ¡¸¸´ÖÆ¡¹ÃüÁî[×ÜÊÇ·µ»Ø ```false```Ö±µ½ÓÃ»§½øĞĞÁË½»»¥Ö®ºó](http://crbug.com/476508)¡£Õâµ¼ÖÂÄã²»ÄÜ°ÑÄãµÄ UI ÉèÖÃÎª¡¸disabled¡¹À´±íÊ¾ä¯ÀÀÆ÷²»Ö§³ÖÕâ¸öÃüÁî¡£
-* [Í¨¹ı¿ª·¢Õß¹¤¾ßµ÷ÓÃ ```queryCommandSupported()``` ×ÜÊÇ·µ»Ø ```false```](http://crbug.com/475868)¡£
-* Ä¿Ç°[¡¸¼ôÇĞ¡¹Ö»ÓĞÔÚÄãÍ¨¹ı±à³ÌÊÖ¶ÎÑ¡ÖĞÎÄ±¾µÄÇé¿öÏÂ²Å¹¤×÷](http://crbug.com/476848)¡£
+* è°ƒç”¨ ```queryCommadSupported()``` æ¥æŸ¥è¯¢ã€Œå‰ªåˆ‡ã€å’Œã€Œå¤åˆ¶ã€å‘½ä»¤[æ€»æ˜¯è¿”å› ```false```ç›´åˆ°ç”¨æˆ·è¿›è¡Œäº†äº¤äº’ä¹‹å](http://crbug.com/476508)ã€‚è¿™å¯¼è‡´ä½ ä¸èƒ½æŠŠä½ çš„ UI è®¾ç½®ä¸ºã€Œdisabledã€æ¥è¡¨ç¤ºæµè§ˆå™¨ä¸æ”¯æŒè¿™ä¸ªå‘½ä»¤ã€‚
+* [é€šè¿‡å¼€å‘è€…å·¥å…·è°ƒç”¨ ```queryCommandSupported()``` æ€»æ˜¯è¿”å› ```false```](http://crbug.com/475868)ã€‚
+* ç›®å‰[ã€Œå‰ªåˆ‡ã€åªæœ‰åœ¨ä½ é€šè¿‡ç¼–ç¨‹æ‰‹æ®µé€‰ä¸­æ–‡æœ¬çš„æƒ…å†µä¸‹æ‰å·¥ä½œ](http://crbug.com/476848)ã€‚
